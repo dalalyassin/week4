@@ -1,5 +1,12 @@
 from fastapi import FastAPI
 from routers import health, llm
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 
 app = FastAPI(
     title="LLM API",
