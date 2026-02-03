@@ -1,0 +1,1 @@
+stress_test_prompt = """ you're a helpfull assitant who can answer questions and help with tasks."""
