@@ -16,7 +16,6 @@ if not api_key:
 
 client = OpenAI(api_key=api_key)
 
-
 # SYSTEM_PROMPT 
 def call_llm(req: PromptRequest):
     # Handle None session_id
