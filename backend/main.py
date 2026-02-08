@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from routers import health, llm
+from routers import health
+from app.routers import chat_api
 
 app = FastAPI(
     title="LLM API",
@@ -8,4 +9,8 @@ app = FastAPI(
 )
 
 app.include_router(health.router)
-app.include_router(llm.router)
+app.include_router(chat_api.router)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
