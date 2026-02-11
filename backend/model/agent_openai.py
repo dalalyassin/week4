@@ -19,15 +19,29 @@ available_tools = {
     "get_exchange_rate": get_exchange_rate,
     "tell_joke": tell_joke
 }
+# Thinks
 
+# Calls tools
+
+# Reads results
+
+# Thinks again
+
+# Repeats
 def agent_loop(user_input: str, max_steps: int = 5):
     messages = [
         {"role": "system", "content": "You are a helpful assistant that can plan tasks and use tools."},
         {"role": "user", "content": user_input},
     ]
 
+#the reasoning loop
+# It doesn’t answer once
+
+# It reasons over multiple steps
+
     for step in range(max_steps):
         print(f"\n=== Agent Step {step + 1} ===")
+        print(f"---------------------------------")
 
         # Step 1: Planner - decides next tool or response
         planner_response = client.chat.completions.create(
